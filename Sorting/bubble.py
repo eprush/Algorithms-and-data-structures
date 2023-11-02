@@ -1,4 +1,4 @@
-from sort import experiment
+from sort import series, example
 
 
 def simple(arr: list, ascending=True) -> None:
@@ -41,14 +41,5 @@ def best(arr, ascending=True):
     return
 
 
-example = [-1, 1, 0, 1, 2, -10, -2, 0, 10]
-print("The lenght of example array equals", len(example))
-a = example.copy()
-
-experiment(a, simple)
-a = example.copy()
-
-experiment(a, optimized)
-a = example.copy()
-
-experiment(a, best)
+my_arr = example(10)
+series(my_arr, [simple, optimized, best])
