@@ -19,7 +19,3 @@ def find_dist(A: str, B: str):
         for j in range(1, len(B) + 1):
             next_dist(i, j, editorial_dists)
     return editorial_dists[-1][-1]
-
-
-string_1, string_2 = input().split()
-print(find_dist(string_1, string_2))

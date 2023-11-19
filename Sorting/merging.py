@@ -90,8 +90,3 @@ def optimized(arr: list, ascending=True) -> None:
 
     merge_sort(arr)
     return
-
-
-my_arr = example(100)
-series(my_arr, [simple, optimized], False)
-

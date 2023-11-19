@@ -55,10 +55,4 @@ def optimized(arr: list, ascending=True) -> None:
         hoar_sort(i, end)
         return
     hoar_sort()
-
     return
-
-
-# my_arr = example(100)
-# print(my_arr)
-# series(my_arr, [simple, optimized])

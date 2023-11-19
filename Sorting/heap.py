@@ -45,8 +45,3 @@ def optimized(arr: list, ascending=True) -> None:
     if not ascending:
         arr.reverse()
     return
-
-
-my_arr = example(100)
-print(my_arr)
-series(my_arr, [simple, optimized])

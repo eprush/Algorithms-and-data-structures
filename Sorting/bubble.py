@@ -33,7 +33,3 @@ def best(arr, ascending=True):
                 swapping = True
         i += 1
     return
-
-
-my_arr = example(100)
-series(my_arr, [simple, optimized, best])

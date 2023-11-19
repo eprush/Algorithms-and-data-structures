@@ -9,7 +9,3 @@ def simple(arr: list, ascending=True):
             arr[j], arr[j + 1] = arr[j + 1], arr[j]
             j -= 1
     return
-
-
-my_arr = example(100)
-series(my_arr, [simple])

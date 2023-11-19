@@ -19,7 +19,3 @@ def best(arr: list, ascending=True):
                 min_index = j
         arr[min_index], arr[i] = arr[i], arr[min_index]
     return
-
-
-my_arr = example(100)
-series(my_arr, [simple, best])

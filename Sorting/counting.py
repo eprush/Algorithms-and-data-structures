@@ -15,10 +15,3 @@ def simple(arr: list, ascending=True) -> None:
     if not ascending:
         arr.reverse()
     return
-
-
-n = int(input())
-length = int(input())
-my_arr = [random.randint(0, n-1) for _ in range(length)]
-print(my_arr)
-series(my_arr, [simple])
