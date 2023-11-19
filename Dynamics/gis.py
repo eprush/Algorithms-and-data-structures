@@ -2,22 +2,28 @@ from Tests.dynamics import gis_example as example
 from Sorting.hoar import simple as hoar_sort
 
 
-def gis(arr: list):
-    F = [0] * (len(arr) + 1)
-    for i in range(len(arr)):
+def find_gis(arr: list):
+    def init_extreme_case():
+        return [0] * (len(arr) + 1)
+    great_increasing_len = init_extreme_case()
+
+    def max_of_pasts(pos):
         maximum = 0
-        for j in range(i):
-            if arr[i] > arr[j] and F[j+1] > maximum:
-                maximum = F[j+1]
-        F[i+1] = maximum + 1
-    return max(*F)
+        for j in range(pos):
+            if arr[pos] > arr[j] and great_increasing_len[j + 1] > maximum:
+                maximum = great_increasing_len[j + 1]
+        return maximum
+
+    for i in range(len(arr)):
+        great_increasing_len[i+1] = max_of_pasts(i) + 1
+    return max(*great_increasing_len)
 
 
 N = int(input())
 my_arr = example(N)
 print(my_arr)
-print(gis(my_arr))
+print(find_gis(my_arr))
 
 hoar_sort(my_arr)
 print(my_arr)
-print(gis(my_arr))
+print(find_gis(my_arr))
