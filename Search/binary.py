@@ -1,5 +1,5 @@
 from Tests.search import series, example
-from Sorting.hoar import simple
+from Sorting.Quick.hoar import simple
 
 
 # if only one element, which equal key,  exists, return his index

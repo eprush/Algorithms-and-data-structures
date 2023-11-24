@@ -1,5 +1,5 @@
 from Tests.dynamics import gis_example as example
-from Sorting.hoar import simple as hoar_sort
+from Sorting.Quick.hoar import simple as hoar_sort
 
 
 def find_gis(arr: list):

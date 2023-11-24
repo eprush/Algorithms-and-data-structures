@@ -1,4 +1,4 @@
-from weights_adj_list import adj_list, n
+from Graphs.Storages.weights_adj_list import adj_list, n
 
 
 # Prim 's algorithm

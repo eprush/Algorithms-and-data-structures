@@ -1,5 +1,4 @@
 from Tests.search import series, example
-from Sorting.hoar import simple
 
 
 def linear_search(arr: list, key):

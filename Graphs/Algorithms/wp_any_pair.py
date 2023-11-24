@@ -1,4 +1,4 @@
-from weights_adj_matrix import adj_matrix, n
+from Graphs.Storages.weights_adj_matrix import adj_matrix, n
 
 
 # the Floyd-Warshell algorithm

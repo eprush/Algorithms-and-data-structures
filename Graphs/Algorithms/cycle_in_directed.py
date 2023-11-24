@@ -1,5 +1,5 @@
-from dfs import adj_list
-from dfs import used, n
+from Graphs.Storages.adj_list import adj_list, n
+from dfs import used
 
 is_cycle_found = False
 end_of_cycle = -1

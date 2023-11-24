@@ -1,5 +1,5 @@
 from queue import SimpleQueue
-from adj_list import adj_list, n
+from Graphs.Storages.adj_list import adj_list, n
 
 
 def find_all_dists_from(start: int):

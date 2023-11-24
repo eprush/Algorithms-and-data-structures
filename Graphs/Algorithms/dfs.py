@@ -1,4 +1,4 @@
-from adj_list import adj_list, n
+from Graphs.Storages.adj_list import adj_list, n
 
 used = [False] * n
 
