@@ -1,14 +1,12 @@
-from Tests.sorting import series, example
-
-
 def simple(arr: list, ascending=True) -> None:
     sign = 2 * int(ascending) - 1
+
     def merge(arr_1: list, arr_2: list) -> list:
         res = [0] * (len(arr_1) + len(arr_2))
         i, j, n = 0, 0, 0
         while (i < len(arr_1)) and (j < len(arr_2)):
             # <= - because of stability
-            if sign*arr_1[i] <= sign*arr_2[j]:
+            if sign * arr_1[i] <= sign * arr_2[j]:
                 res[n] = arr_1[i]
                 i += 1
             else:
@@ -47,11 +45,12 @@ def simple(arr: list, ascending=True) -> None:
 
 def optimized(arr: list, ascending=True) -> None:
     sign = 2 * int(ascending) - 1
+
     def merge(some_arr: list, left: int, middle: int, right: int) -> None:
         buffer = [0] * (right - left)
         i, old_left, old_middle = 0, left, middle
         while (left < old_middle) and (middle < right):
-            if sign*some_arr[left] <= sign*some_arr[middle]:
+            if sign * some_arr[left] <= sign * some_arr[middle]:
                 buffer[i] = some_arr[left]
                 left += 1
             else:
@@ -90,3 +89,10 @@ def optimized(arr: list, ascending=True) -> None:
 
     merge_sort(arr)
     return
+
+
+if __name__ == "__main__":
+    from Tests.sorting import series, example
+
+    my_arr = example(int(input("The array lenght: ")))
+    series(my_arr, [simple, optimized])

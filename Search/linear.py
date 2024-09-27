@@ -1,6 +1,3 @@
-from Tests.search import series, example
-
-
 def linear_search(arr: list, key):
     for i in range(len(arr)):
         if arr[i] == key:
@@ -9,7 +6,10 @@ def linear_search(arr: list, key):
     return error_note
 
 
-my_arr = example(1000)
-print(my_arr)
-number = int(input())
-series(my_arr, [linear_search], number)
+if __name__ == "__main__":
+    from Tests.search import series, example
+
+    my_arr = example(1000)
+    print(my_arr)
+    number = int(input())
+    series(my_arr, [linear_search], number)

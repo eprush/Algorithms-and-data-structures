@@ -1,6 +1,3 @@
-from Tests.sorting import series, example
-
-
 def build_heap(heap):
     n = len(heap)
     for i in range(n // 2, -1, -1):
@@ -45,3 +42,10 @@ def optimized(arr: list, ascending=True) -> None:
     if not ascending:
         arr.reverse()
     return
+
+
+if __name__ == "__main__":
+    from Tests.sorting import series, example
+
+    my_arr = example(int(input("The array lenght: ")))
+    series(my_arr, [simple, optimized])

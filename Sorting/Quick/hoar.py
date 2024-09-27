@@ -1,7 +1,3 @@
-from Tests.sorting import series, example
-
-
-# version uses additional memory
 def simple(arr: list, ascending=True) -> None:
     sign = 2 * int(ascending) - 1
 
@@ -54,5 +50,13 @@ def optimized(arr: list, ascending=True) -> None:
         hoar_sort(begin, j)
         hoar_sort(i, end)
         return
+
     hoar_sort()
     return
+
+
+if __name__ == "__main__":
+    from Tests.sorting import series, example
+
+    my_arr = example(int(input("The array lenght: ")))
+    series(my_arr, [simple, optimized])
