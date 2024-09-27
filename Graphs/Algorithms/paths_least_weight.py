@@ -34,5 +34,5 @@ def find_paths(start: int):
 
 
 if __name__ == "__main__":
-    s = int(input())
+    s = int(input("Start from: "))
     print(find_paths(s))

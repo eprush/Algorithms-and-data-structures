@@ -19,11 +19,11 @@ def fill_directed_matrix(vert: int, edges: int):
     return matrix
 
 
-if "__name__" == "__main__":
-    print("Do you want create the undirected graphs?")
-    ans = input()
-    n, m = map(int, input("verticles  edges:").split())
-    if ans == "YES":
-        adj_m = fill_undirected_matrix(n, m)
-    else:
-        adj_m = fill_directed_matrix(n, m)
+print("Do you want create the undirected graphs?")
+ans = input()
+n, m = map(int, input("verticles  edges:").split())
+if ans == "YES":
+    adj_m = fill_undirected_matrix(n, m)
+else:
+    adj_m = fill_directed_matrix(n, m)
+

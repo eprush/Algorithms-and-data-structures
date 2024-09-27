@@ -43,4 +43,4 @@ def is_cycle_graph():
 if __name__ == "__main__":
     is_cycle_graph()
     ans = " " if is_cycle_found else " no "
-    print("Graph has{}cycle".format(ans))
+    print("Graph has {} cycle".format(ans))

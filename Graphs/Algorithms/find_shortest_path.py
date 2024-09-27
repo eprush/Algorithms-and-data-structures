@@ -56,10 +56,15 @@ def find_shortest_path(start: int, target: int):
 
 if __name__ == "__main__":
     print("Do you want to find the shortest path or all distances? ")
-    ans = input()
-    if ans == "all distances":
-        s = int(input("start from: "))
-        print(find_all_dists_from(s))
-    elif ans == "the shortest path":
-        s, t = map(int, input("start_from to: ").split())
-        print(find_shortest_path(s, t))
+    while True:
+        ans = input()
+        if ans == "all distances":
+            s = int(input("start from: "))
+            print(find_all_dists_from(s))
+            break
+        elif ans == "the shortest path":
+            s, t = map(int, input("start_from to: ").split())
+            print(find_shortest_path(s, t))
+            break
+        else:
+            print("Please choose 'the shortest path' or 'all distances'")

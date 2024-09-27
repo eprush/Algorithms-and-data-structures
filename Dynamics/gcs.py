@@ -1,6 +1,3 @@
-from Tests.dynamics import gcs_example as example
-
-
 def find_gcs(A: list, B: list):
     def init_extreme_case():
         return [[0] * (len(B) + 1) for _ in range(len(A) + 1)]
@@ -21,7 +18,9 @@ def find_gcs(A: list, B: list):
     return common_seq_len[-1][-1]
 
 
-N, n = int(input()), int(input())
-seq_1, seq_2 = example(N, n)
-print(seq_1, seq_2)
-print(find_gcs(seq_1, seq_2))
+if __name__ == "__main__":
+    from Tests.dynamics import gcs_example as create_example
+    N, n = int(input()), int(input())
+    seq_1, seq_2 = create_example(N, n)
+    print(seq_1, seq_2)
+    print(find_gcs(seq_1, seq_2))

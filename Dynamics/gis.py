@@ -1,7 +1,3 @@
-from Tests.dynamics import gis_example as example
-from Sorting.Quick.hoar import simple as hoar_sort
-
-
 def find_gis(arr: list):
     def init_extreme_case():
         return [0] * (len(arr) + 1)
@@ -19,11 +15,14 @@ def find_gis(arr: list):
     return max(*great_increasing_len)
 
 
-N = int(input())
-my_arr = example(N)
-print(my_arr)
-print(find_gis(my_arr))
+if __name__ == "__main__":
+    from Tests.dynamics import gis_example as create_example
+    from Sorting.Quick.hoar import simple as hoar_sort
+    N = int(input())
+    my_arr = create_example(N)
+    print(my_arr)
+    print(find_gis(my_arr))
 
-hoar_sort(my_arr)
-print(my_arr)
-print(find_gis(my_arr))
+    hoar_sort(my_arr)
+    print(my_arr)
+    print(find_gis(my_arr))

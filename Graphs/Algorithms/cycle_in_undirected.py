@@ -36,4 +36,4 @@ def is_cycle_graph():
 
 if __name__ == "__main__":
     ans = " " if is_cycle_graph() else " no "
-    print("Graph has{}cycle".format(ans))
+    print("Graph has {} cycle".format(ans))

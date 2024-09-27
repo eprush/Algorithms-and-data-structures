@@ -1,8 +1,8 @@
-def create(edges: int):
+def create(edges: int) -> list:
     return [(0, 0)] * edges
 
 
-def fill_undirected_list(edges: int):
+def fill_undirected_list(edges: int) -> list:
     edge_list = []
     for i in range(edges):
         u, v = map(int, input().split())
@@ -11,7 +11,7 @@ def fill_undirected_list(edges: int):
     return edge_list
 
 
-def fill_directed_list(edges: int):
+def fill_directed_list(edges: int) -> list:
     edge_list = create(edges)
     for i in range(edges):
         u, v = map(int, input().split())
